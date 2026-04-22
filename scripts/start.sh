@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Resolve project root for bash, zsh, and whether this file is run or sourced.
+# (Sourcing in zsh does not set BASH_SOURCE, so BASH_SOURCE[0] is invalid there.)
+if [[ -n "${BASH_SOURCE[0]:-}" ]]; then
+  _SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+elif [[ -n "${ZSH_VERSION:-}" ]]; then
+  # zsh: path of the file being parsed
+  # shellcheck disable=SC2296
+  _SCRIPT_DIR="$(cd "$(dirname "${(%):-%x}")" && pwd)"
+else
+  _SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+fi
+ROOT_DIR="$(cd "$_SCRIPT_DIR/.." && pwd)"
 RUN_DIR="$ROOT_DIR/.run"
 LOG_DIR="$RUN_DIR/logs"
 BACKEND_PID_FILE="$RUN_DIR/backend.pid"
@@ -52,9 +63,9 @@ start_backend() {
   fi
 
   echo "Installing backend dependencies..."
-  # shellcheck disable=SC1091
-  source "$ROOT_DIR/backend/.venv/bin/activate"
-  pip install -r "$ROOT_DIR/backend/requirements.txt" >/dev/null
+  # Use the venv interpreter so this works when the script is sourced in zsh
+  # (activate is bash-oriented; `pip` may not land on PATH).
+  "$ROOT_DIR/backend/.venv/bin/python" -m pip install -r "$ROOT_DIR/backend/requirements.txt" >/dev/null
 
   echo "Starting backend..."
   nohup bash -lc "cd \"$ROOT_DIR/backend\" && source .venv/bin/activate && uvicorn app.main:app --reload --host 127.0.0.1 --port 8000" \

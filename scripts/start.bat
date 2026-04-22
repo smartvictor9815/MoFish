@@ -31,7 +31,9 @@ powershell -NoProfile -Command ^
   "$p = Start-Process -FilePath 'cmd.exe' -ArgumentList '/c cd /d \"%ROOT_DIR%\backend\" ^& call .venv\\Scripts\\activate ^& uvicorn app.main:app --reload --host 127.0.0.1 --port 8000' -RedirectStandardOutput '%LOG_DIR%\backend.log' -RedirectStandardError '%LOG_DIR%\backend.log' -WindowStyle Hidden -PassThru; $p.Id" > "%BACKEND_PID_FILE%"
 
 echo Installing frontend dependencies...
+pushd "%ROOT_DIR%" >nul
 call npm install >nul
+popd >nul
 
 echo Starting frontend...
 powershell -NoProfile -Command ^
