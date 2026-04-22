@@ -25,6 +25,24 @@ npm run dev
 
 The frontend proxies `/api` requests to `http://127.0.0.1:8000` in development.
 
+## One-line install (from GitHub)
+
+**macOS / Linux (bash):** installs to `~/MoFish` by default (override with `INSTALL_DIR` or `--dir`).
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/smartvictor9815/MoFish/master/scripts/install.sh | bash
+```
+
+Optional: add `--start` to run the dev servers after install, or set `INSTALL_DIR` / `REPO` / `BRANCH` when needed.
+
+**Windows (PowerShell):** same defaults as above; use `-Dir` or `$env:INSTALL_DIR` to override. From an existing clone, `install.ps1` also defaults to the repo root.
+
+```powershell
+irm https://raw.githubusercontent.com/smartvictor9815/MoFish/master/scripts/install.ps1 | iex
+```
+
+If you already cloned: run `bash scripts/install.sh` or `powershell -ExecutionPolicy Bypass -File scripts\install.ps1` — the script path is used to find the project root (set `INSTALL_DIR` / `--dir` / `-Dir` if you need another directory).
+
 ## One-command start/stop
 
 From project root:
