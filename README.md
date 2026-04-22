@@ -1,7 +1,7 @@
 
-# HappyWork
+# MoFish
 
-This is the HappyWork project codebase.
+This is the MoFish project codebase.
 
 ## Project docs
 

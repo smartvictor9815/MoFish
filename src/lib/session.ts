@@ -1,4 +1,4 @@
-const TOKEN_KEY = "happywork_token";
+const TOKEN_KEY = "mofish_token";
 
 export function saveToken(token: string, rememberMe: boolean) {
   clearToken();

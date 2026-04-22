@@ -14,6 +14,7 @@ pnpm-debug.log*
 backend/.venv/
 backend/__pycache__/
 backend/**/*.pyc
+backend/mofish.db
 backend/happywork.db
 backend/.env
 

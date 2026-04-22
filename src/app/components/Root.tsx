@@ -202,12 +202,12 @@ export default function Root() {
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500 flex-shrink-0">
                 <img
                   src="https://images.unsplash.com/photo-1758691737538-220c1902b1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxoYXBweSUyMHdvcmslMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwxfHx8fDE3NzY4NjcyNDJ8MA&ixlib=rb-4.1.0&q=80&w=200"
-                  alt="HappyWork"
+                  alt="MoFish"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold">HappyWork</h1>
+                <h1 className="text-xl font-bold">MoFish</h1>
                 <p className="text-xs text-gray-400">More intelligence, More fish</p>
               </div>
             </div>

@@ -8,7 +8,7 @@ from cli.commands.user_cmd import list_users_command
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="HappyWork backend CLI")
+    parser = argparse.ArgumentParser(description="MoFish backend CLI")
     subparsers = parser.add_subparsers(dest="command")
 
     users_parser = subparsers.add_parser("users", help="User related commands")

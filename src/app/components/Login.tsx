@@ -132,11 +132,11 @@ export default function Login() {
           <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-white border-opacity-30">
             <img
               src="https://images.unsplash.com/photo-1758691737538-220c1902b1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxoYXBweSUyMHdvcmslMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwxfHx8fDE3NzY4NjcyNDJ8MA&ixlib=rb-4.1.0&q=80&w=400"
-              alt="HappyWork"
+              alt="MoFish"
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-3xl font-bold mb-2">HappyWork</h1>
+          <h1 className="text-3xl font-bold mb-2">MoFish</h1>
           <p className="text-blue-100 text-sm">More intelligence, More fish</p>
         </div>
 

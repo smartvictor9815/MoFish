@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "HappyWork API"
+    app_name: str = "MoFish API"
     api_prefix: str = "/api"
-    database_url: str = "sqlite:///./happywork.db"
+    database_url: str = "sqlite:///./mofish.db"
     secret_key: str = "change-me"
     access_token_expire_minutes: int = 480
     system_timezone: str = "Asia/Shanghai"

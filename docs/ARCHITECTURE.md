@@ -1,8 +1,8 @@
-# HappyWork Architecture
+# MoFish Architecture
 
 ## Overview
 
-HappyWork is a full-stack application with:
+MoFish is a full-stack application with:
 
 - Frontend: Vite + React + React Router
 - Backend API: FastAPI + SQLAlchemy
@@ -12,7 +12,7 @@ HappyWork is a full-stack application with:
 ## Top-level Structure
 
 ```text
-HappyWork/
+MoFish/
 ├─ src/                  # Frontend source
 ├─ backend/
 │  ├─ app/               # FastAPI app layer

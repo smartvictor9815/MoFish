@@ -60,10 +60,10 @@ export default function Home() {
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-8 text-white">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold mb-4">欢迎使用 HappyWork</h1>
+          <h1 className="text-4xl font-bold mb-4">欢迎使用 MoFish</h1>
           <p className="text-xl text-blue-100 mb-2">More intelligence, More fish</p>
           <p className="text-blue-100">
-            HappyWork是一个智能化的项目管理和协作平台，帮助团队提高工作效率，实现更好的协作。
+            MoFish是一个智能化的项目管理和协作平台，帮助团队提高工作效率，实现更好的协作。
           </p>
         </div>
       </div>
